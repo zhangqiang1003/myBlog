@@ -2,7 +2,9 @@ from flask_script import Manager
 from flask_migrate import Migrate, MigrateCommand
 
 # 导入启动manage.py的操作
-from info import app, db
+from info import create_app, db
+
+app = create_app('development')
 
 manager = Manager(app)
 Migrate(app, db)
