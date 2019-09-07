@@ -48,7 +48,12 @@ def create_app(config_name):
     Session(app)
 
     # 注册蓝图
+    # 首页蓝图
     from info.modules.index import index_blu
     app.register_blueprint(index_blu)
+
+    # 文章页蓝图
+    from info.modules.article import article_blu
+    app.register_blueprint(article_blu)
 
     return app
