@@ -12,11 +12,11 @@ Migrate(app, db)
 manager.add_command('db', MigrateCommand)
 
 
-@app.route('/index')
-def index():
-    current_app.logger.debug('debug')
-    current_app.logger.error('error')
-    return 'index'
+# @app.route('/index')
+# def index():
+#     current_app.logger.debug('debug')
+#     current_app.logger.error('error')
+#     return 'index'
 
 if __name__ == '__main__':
     manager.run()
